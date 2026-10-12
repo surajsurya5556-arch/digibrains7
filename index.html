@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+
+  <title>DigiBrains7 | Learn Excel & Computer Skills</title>
+  <meta name="description" content="Learn Microsoft Excel, useful formulas, computer skills and practical tips with DigiBrains7.">
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #131e30;
+      --text: #f5f7ff;
+      --muted: #aab7ca;
+      --accent: #b7f36b;
+      --line: #28364a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: #0b1220;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span { color: var(--accent); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 76px 0 60px;
+      background:
+        radial-gradient(ellipse at 90% 10%, #263b35 0%, transparent 42%),
+        var(--bg);
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--accent);
+      border: 1px solid #3e5635;
+      background: #18271c;
+      border-radius: 30px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin: 20px 0;
+      max-width: 760px;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .hero p {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 27px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 9px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #14200e;
+    }
+
+    .secondary {
+      border: 1px solid #42516a;
+      color: var(--text);
+    }
+
+    section { padding: 54px 0; }
+
+    .section-head { margin-bottom: 24px; }
+
+    h2 {
+      font-size: clamp(25px, 5vw, 34px);
+      line-height: 1.2;
+      margin: 0 0 8px;
+    }
+
+    .sub { color: var(--muted); margin: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 22px;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #71805f;
+    }
+
+    .emoji { font-size: 29px; }
+
+    .card h3 { margin: 12px 0 7px; font-size: 18px; }
+
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 15px;
+    }
+
+    .learn {
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .tools { background: #0e1726; }
+
+    .search {
+      width: 100%;
+      padding: 14px;
+      margin: 0 0 20px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: white;
+      font-size: 15px;
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .cta {
+      border: 1px solid #40543a;
+      border-radius: 18px;
+      padding: 28px;
+      background: linear-gradient(120deg, #17271c, #131e30);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav { gap: 12px; }
+
+      .hero { padding: 55px 0 42px; }
+
+      .grid { grid-template-columns: 1fr; }
+
+      section { padding: 40px 0; }
+
+      h1 { letter-spacing: -1.2px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#home">DigiBrains<span>7</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#learn">Learn Excel</a>
+        <a href="#tools">Tools</a>
+        <a href="#youtube">YouTube</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <span class="tag">LEARN • PRACTICE • GROW</span>
+
+        <h1>Upgrade Your Skills with <span>DigiBrains7.</span></h1>
+
+        <p>
+          Learn Excel formulas, computer skills and practical tricks
+          through simple tutorials designed for beginners.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="#learn">Start Learning →</a>
+          <a class="btn secondary" href="#tools">Explore Free Tools</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn">
+      <div class="container">
+        <div class="section-head">
+          <h2>Explore Excel Learning</h2>
+          <p class="sub">Build your skills one topic at a time.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="emoji">📗</div>
+            <h3>Excel Basics</h3>
+            <p>Learn cells, rows, columns, formatting and essential shortcuts.</p>
+            <a class="learn" href="#youtube">Explore topics →</a>
+          </article>
+
+          <article class="card">
+            <div class="emoji">🧮</div>
+            <h3>Formulas & Functions</h3>
+            <p>Understand SUM, COUNT, IF, DSUM and useful Excel formulas.</p>
+            <a class="learn" href="#youtube">Explore topics →</a>
+          </article>
+
+          <article class="card">
+            <div class="emoji">🔎</div>
+            <h3>Lookup & Data</h3>
+            <p>Practice VLOOKUP, XLOOKUP and everyday data-management skills.</p>
+            <a class="learn" href="#youtube">Explore topics →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" id="tools">
+      <div class="container">
+        <div class="section-head">
+          <h2>Free Learning Tools</h2>
+          <p class="sub">Find a tool or calculator to use in future updates.</p>
+        </div>
+
+        <input
+          class="search"
+          id="toolSearch"
+          type="search"
+          placeholder="Search tools..."
+          aria-label="Search tools"
+        >
+
+        <div class="grid" id="toolGrid">
+          <article class="card" data-name="percentage calculator">
+            <div class="emoji">📊</div>
+            <h3>Percentage Calculator</h3>
+            <p>Plan a simple calculator for percentages and marks.</p>
+            <span class="learn">Coming soon</span>
+          </article>
+
+          <article class="card" data-name="emi calculator">
+            <div class="emoji">💰</div>
+            <h3>EMI Calculator</h3>
+            <p>Plan a monthly loan-payment calculator.</p>
+            <span class="learn">Coming soon</span>
+          </article>
+
+          <article class="card" data-name="excel formula helper">
+            <div class="emoji">⚡</div>
+            <h3>Excel Formula Helper</h3>
+            <p>Plan a searchable guide to common Excel formulas.</p>
+            <span class="learn">Coming soon</span>
+          </article>
+        </div>
+
+        <p class="notice" id="noResults" hidden>No matching tools found.</p>
+      </div>
+    </section>
+
+    <section id="youtube">
+      <div class="container">
+        <div class="cta">
+          <h2>Learn with DigiBrains7 on YouTube</h2>
+          <p class="sub">
+            Watch practical Excel tutorials and discover new computer tips.
+          </p>
+
+          <!-- Replace YOUR_CHANNEL_ID with your real YouTube channel ID -->
+          <div class="actions">
+            <a
+              class="btn primary"
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Visit YouTube →</a>
+          </div>
+
+          <p class="notice">
+            Next update: connect your actual YouTube channel and display videos.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© <span id="year"></span> DigiBrains7</span>
+      <span>Learn Excel. Build Skills. Grow Every Day.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const search = document.getElementById("toolSearch");
+    const cards = document.querySelectorAll("#toolGrid .card");
+    const noResults = document.getElementById("noResults");
+
+    search.addEventListener("input", function () {
+      const query = this.value.trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach(function (card) {
+        const name = card.dataset.name.toLowerCase();
+        const match = name.includes(query);
+
+        card.hidden = !match;
+        if (match) visible++;
+      });
+
+      noResults.hidden = visible !== 0;
+    });
+  </script>
+</body>
+</html>
