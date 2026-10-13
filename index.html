@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#101827">
 
   <title>DigiBrains7 | Suraj Safi | Learn Excel</title>
-  <meta name="description" content="Learn Excel formulas, computer skills and practical tips with Suraj Safi on DigiBrains7.">
+  <meta name="description" content="Learn Excel formulas, computer skills and practical tips with DigiBrains7.">
 
   <style>
     :root {
@@ -54,7 +54,7 @@
     }
 
     .nav {
-      min-height: 76px;
+      min-height: 90px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -64,37 +64,40 @@
     .profile-header {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
       flex-shrink: 0;
     }
 
     .profile-header img {
-      width: 48px;
-      height: 48px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      min-width: 100px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--accent);
+      object-position: center;
+      border: 3px solid var(--accent);
       background: var(--panel);
     }
 
     .profile-info {
       display: flex;
       flex-direction: column;
-      line-height: 1.3;
+      line-height: 1.4;
     }
 
     .profile-name {
-      font-size: 17px;
+      font-size: 21px;
       font-weight: 800;
     }
 
     .profile-title {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--muted);
     }
 
     .logo {
-      font-size: 19px;
+      font-size: 21px;
       font-weight: 800;
       white-space: nowrap;
     }
@@ -284,6 +287,12 @@
         flex-direction: column;
       }
 
+      .profile-header img {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+      }
+
       .grid {
         grid-template-columns: 1fr;
       }
@@ -312,18 +321,19 @@
   <header>
     <div class="container nav">
 
-      <!-- Your profile photo and name -->
       <div class="profile-header">
-        <img src="profile.jpg" alt="Suraj Safi profile photo">
+        <img
+          src="./profile%20jpg.jpg"
+          alt="Suraj Safi profile photo"
+        >
+
         <div class="profile-info">
           <span class="profile-name">Suraj Safi</span>
           <span class="profile-title">Creator of DigiBrains7</span>
         </div>
       </div>
 
-      <a class="logo" href="#home">
-        DigiBrains<span>7</span>
-      </a>
+      <a class="logo" href="#home">DigiBrains<span>7</span></a>
 
       <nav aria-label="Main navigation">
         <a href="#home">Home</a>
@@ -341,39 +351,29 @@
       <div class="container">
         <span class="tag">LEARN • PRACTICE • GROW</span>
 
-        <h1>
-          Upgrade Your Skills with
-          <span>DigiBrains7.</span>
-        </h1>
+        <h1>Upgrade Your Skills with <span>DigiBrains7.</span></h1>
 
         <p>
           Welcome! I am Suraj Safi, creator of DigiBrains7.
-          Learn Excel formulas, computer skills and practical
-          tricks through simple tutorials designed for beginners.
+          Learn Excel formulas, computer skills and practical tricks
+          through simple tutorials designed for beginners.
         </p>
 
         <div class="actions">
-          <a class="btn primary" href="#learn">
-            Start Learning →
-          </a>
-
-          <a class="btn secondary" href="#tools">
-            Explore Free Tools
-          </a>
+          <a class="btn primary" href="#learn">Start Learning →</a>
+          <a class="btn secondary" href="#tools">Explore Free Tools</a>
         </div>
       </div>
     </section>
 
     <section id="learn">
       <div class="container">
-
         <div class="section-head">
           <h2>Explore Excel Learning</h2>
           <p class="sub">Build your skills one topic at a time.</p>
         </div>
 
         <div class="grid">
-
           <article class="card">
             <div class="emoji">📗</div>
             <h3>Excel Basics</h3>
@@ -394,17 +394,15 @@
             <p>Practice VLOOKUP, XLOOKUP and everyday data-management skills.</p>
             <a class="learn" href="#youtube">Explore topics →</a>
           </article>
-
         </div>
       </div>
     </section>
 
     <section class="tools" id="tools">
       <div class="container">
-
         <div class="section-head">
           <h2>Free Learning Tools</h2>
-          <p class="sub">Search the tools available on this website.</p>
+          <p class="sub">Search the learning tools listed below.</p>
         </div>
 
         <input
@@ -416,46 +414,40 @@
         >
 
         <div class="grid" id="toolGrid">
-
           <article class="card" data-name="percentage calculator">
             <div class="emoji">📊</div>
             <h3>Percentage Calculator</h3>
-            <p>A percentage calculator will be available in a future update.</p>
+            <p>A percentage calculator is planned for a future update.</p>
             <span class="learn">Coming soon</span>
           </article>
 
           <article class="card" data-name="emi calculator">
             <div class="emoji">💰</div>
             <h3>EMI Calculator</h3>
-            <p>An EMI calculator will be available in a future update.</p>
+            <p>An EMI calculator is planned for a future update.</p>
             <span class="learn">Coming soon</span>
           </article>
 
           <article class="card" data-name="excel formula helper">
             <div class="emoji">⚡</div>
             <h3>Excel Formula Helper</h3>
-            <p>A searchable Excel formula guide is planned for a future update.</p>
+            <p>A searchable formula guide is planned for a future update.</p>
             <span class="learn">Coming soon</span>
           </article>
-
         </div>
 
         <p class="notice" id="noResults" hidden>
           No matching tools found.
         </p>
-
       </div>
     </section>
 
     <section id="youtube">
       <div class="container">
-
         <div class="cta">
           <h2>Learn with DigiBrains7 on YouTube</h2>
-
           <p class="sub">
-            Watch practical Excel tutorials and discover new computer tips
-            on my YouTube channel.
+            Watch practical Excel tutorials and discover new computer tips.
           </p>
 
           <div class="actions">
@@ -464,16 +456,13 @@
               href="https://www.youtube.com/@DigiBrains7"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Visit YouTube →
-            </a>
+            >Visit YouTube →</a>
           </div>
 
           <p class="notice">
             Created by Suraj Safi • DigiBrains7
           </p>
         </div>
-
       </div>
     </section>
 
@@ -499,14 +488,10 @@
       let visible = 0;
 
       cards.forEach(function (card) {
-        const name = card.dataset.name.toLowerCase();
-        const match = name.includes(query);
-
+        const match = card.dataset.name.includes(query);
         card.hidden = !match;
 
-        if (match) {
-          visible++;
-        }
+        if (match) visible++;
       });
 
       noResults.hidden = visible !== 0;
